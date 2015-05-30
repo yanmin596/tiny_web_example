@@ -1,3 +1,4 @@
 # Database connection string
 # added by test2
+# added by test3
 database_uri 'mysql2://localhost/tiny_web_example?user=root'
