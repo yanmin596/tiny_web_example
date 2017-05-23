@@ -39,13 +39,13 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 exec $SHELL -l
 
 # install build require for ruby-build
-yum install -y gcc openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
+yum install -y gcc openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel libffi-devel
 
 # install ruby-build
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # install ruby
-ruby_version="2.0.0-p598"
+ruby_version="2.2.2"
 
 rbenv install -v "${ruby_version}"
 rbenv rehash
