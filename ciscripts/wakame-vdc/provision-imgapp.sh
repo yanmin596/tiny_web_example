@@ -26,6 +26,11 @@ rpm -qa epel-release* | egrep -q epel-release || {
 }
 yum repolist
 
+# update libcurl
+rpm -Uvh http://www.city-fan.org/ftp/contrib/yum-repo/city-fan.org-release-1-13.rhel6.noarch.rpm
+sed -i "s,enabled=1,enabled=0," /etc/yum.repos.d/city-fan.org.repo
+yum update -y --enablerepo=city-fan.org libcurl
+
 # install rbenv
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 # setup rbenv
